@@ -17,7 +17,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:id="@+id/linearLayout">
         <ImageView
             android:id="@+id/logo"
             android:layout_width="match_parent"
@@ -28,12 +29,23 @@
             android:id="@+id/alias_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/alias_full_name"
+            android:gravity="center"
+            android:text="Amity Linux Assistance \n Sapience"
             android:layout_below="@id/logo"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textAlignment="center"
             android:textStyle="normal|bold"
             android:textSize="24sp" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="78dp"
+        android:layout_height="88dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@mipmap/mail" />
+
 
 </RelativeLayout>
