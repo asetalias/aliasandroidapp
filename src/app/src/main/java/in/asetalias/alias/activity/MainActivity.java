@@ -15,10 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import in.asetalias.alias.R;
-//import in.asetalias.alias.fragments.AboutFragment;
-//import in.asetalias.alias.fragments.CommunityFragment;
-//import in.asetalias.alias.fragments.EventsFragment;
-//import in.asetalias.alias.fragments.WebinarFragment;
+import in.asetalias.alias.fragments.AboutFragment;
+import in.asetalias.alias.fragments.CommunityFragment;
+import in.asetalias.alias.fragments.EventsFragment;
+import in.asetalias.alias.fragments.WebinarFragment;
+import in.asetalias.alias.fragments.AboutFragment;
+import in.asetalias.alias.fragments.CommunityFragment;
+import in.asetalias.alias.fragments.EventsFragment;
+import in.asetalias.alias.fragments.WebinarFragment;
 
 /**
  * Created by Jayant on 2017-10-29.
@@ -68,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-//        adapter.addFragment(new EventsFragment(), "Events");
-//        adapter.addFragment(new WebinarFragment(), "Webinars");
-//        adapter.addFragment(new CommunityFragment(), "Communities");
-//        adapter.addFragment(new AboutFragment(), "About");
+        adapter.addFragment(new EventsFragment(), "Events");
+        adapter.addFragment(new WebinarFragment(), "Webinars");
+        adapter.addFragment(new CommunityFragment(), "Communities");
+        adapter.addFragment(new AboutFragment(), "About");
         viewPager.setAdapter(adapter);
     }
 
