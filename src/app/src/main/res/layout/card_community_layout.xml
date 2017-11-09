@@ -30,14 +30,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!--
-            <ImageView
-                android:id="@+id/img_community"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerInParent="true" />-->
-
             <TextView
                 android:id="@+id/txt_description_community"
                 android:layout_width="wrap_content"

@@ -136,19 +136,12 @@ public class WebinarFragment extends Fragment {
 
         private void parseResult(String result) {
             try {
-//                if json contain its array name, then this LOC, else the below one
-//                JSONArray posts = response.optJSONArray("posts");
-
                 JSONArray posts = new JSONArray(result);
                 webinarList = new ArrayList<>();
 
                 for (int i = 0; i < posts.length(); i++) {
-                    // this method simply returns null, if no value is found.//
-                    // so better to use this one rather than getJSONObject() method
                     JSONObject post = posts.optJSONObject(i);
 
-                    //this method throws JSONexceptions if value is not found
-//                JSONObject post = posts.getJSONObject(i);
                     webinarItem = new WebinarModel();
                     webinarItem.setTitle(post.optString("title"));
                     webinarItem.setDescription(post.optString("description"));

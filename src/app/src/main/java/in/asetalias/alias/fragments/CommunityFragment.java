@@ -88,7 +88,6 @@ public class CommunityFragment extends Fragment {
         @Override
         protected void onPreExecute() {
             progressBarCommunity.setVisibility(View.VISIBLE);
-//            progressBarEvent.setVisibility(View.GONE);
             swipeRefreshLayoutCommunity.setRefreshing(true);
         }
 
@@ -135,23 +134,10 @@ public class CommunityFragment extends Fragment {
                     break;
             }
             swipeRefreshLayoutCommunity.setRefreshing(false);
-
-            /*
-            if (result == 1) {
-                adapter = new EventAdapter(getActivity(), eventsList);
-                recyclerViewEvent.setAdapter(adapter);
-            } else {
-                Toast.makeText(getActivity(), "Failed to fetch data!", Toast.LENGTH_SHORT).show();
-            }*/
         }
 
         private void parseResult(String result) {
             try {
-//                JSONObject response = new JSONObject(result);
-
-//                if json contain its array name, then this LOC, else the below one
-//                JSONArray posts = response.optJSONArray("posts");
-
                 JSONArray posts = new JSONArray(result);
                 communityList = new ArrayList<>();
 
@@ -159,8 +145,6 @@ public class CommunityFragment extends Fragment {
                     //this method simple returns null if no value is found, so better to use this one rather than getJSONObject
                     JSONObject post = posts.optJSONObject(i);
 
-                    //this method throws JSONexceptions if value is not found
-//                JSONObject post = posts.getJSONObject(i);
                     communityItem = new CommunityModel();
                     communityItem.setTitle(post.optString("title"));
                     communityItem.setDesc(post.optString("desc"));

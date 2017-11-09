@@ -2,6 +2,7 @@ package in.asetalias.alias.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,10 +20,6 @@ import in.asetalias.alias.fragments.AboutFragment;
 import in.asetalias.alias.fragments.CommunityFragment;
 import in.asetalias.alias.fragments.EventsFragment;
 import in.asetalias.alias.fragments.WebinarFragment;
-import in.asetalias.alias.fragments.AboutFragment;
-import in.asetalias.alias.fragments.CommunityFragment;
-import in.asetalias.alias.fragments.EventsFragment;
-import in.asetalias.alias.fragments.WebinarFragment;
 
 /**
  * Created by Jayant on 2017-10-29.
@@ -33,17 +30,18 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
-
         tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+        setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
 
     @Override

@@ -53,12 +53,6 @@ public class EventsFragment extends Fragment {
 
     private SwipeRefreshLayout swipeRefreshLayoutEvent;
 
-
-    //    private String url = "http://stacktips.com/?json=get_category_posts&slug=news&count=30";
-//    private String url = "http://asetalias.in/data/events.json";
-//    private String urlEvent = "https://fir-authentication-5c572.firebaseio.com/.json";
-
-
     public EventsFragment() {
         // Required empty public constructor
     }
@@ -75,6 +69,8 @@ public class EventsFragment extends Fragment {
         progressBarEvent = (ProgressBar) rootView.findViewById(R.id.progress_bar_event);
         fabPlus = (FloatingActionButton) rootView.findViewById(R.id.fab_plus);
 
+
+//        swipe down to refresh the data
         swipeRefreshLayoutEvent = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_container_event);
 
         swipeRefreshLayoutEvent.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -84,14 +80,15 @@ public class EventsFragment extends Fragment {
             }
         });
 
-//                Button to propose a talk/event.
+        //                        Button to propose a talk/event.
         fabPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                intent to open the google form in any of the web browsers installed
+//                intent to open the google form in any of the installd web browsers
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(eventItem.getCta())));
             }
         });
+
 
         recyclerViewEvent.setLayoutManager(new LinearLayoutManager(getActivity()));
         eventAdapter = new EventAdapter(getActivity(), eventsList);
@@ -108,8 +105,8 @@ public class EventsFragment extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            progressBarEvent.setVisibility(View.VISIBLE);
-//            progressBarEvent.setVisibility(View.GONE);
+//            progressBarEvent.setVisibility(View.VISIBLE);
+            progressBarEvent.setVisibility(View.GONE);
             swipeRefreshLayoutEvent.setRefreshing(true);
         }
 
@@ -157,31 +154,17 @@ public class EventsFragment extends Fragment {
             }
             swipeRefreshLayoutEvent.setRefreshing(false);
 
-            /*
-            if (result == 1) {
-                adapter = new EventAdapter(getActivity(), eventsList);
-                recyclerViewEvent.setAdapter(adapter);
-            } else {
-                Toast.makeText(getActivity(), "Failed to fetch data!", Toast.LENGTH_SHORT).show();
-            }*/
+
         }
 
         private void parseResult(String result) {
             try {
-//                JSONObject response = new JSONObject(result);
-
-//                if json contain its array name, then this LOC, else the below one
-//                JSONArray posts = response.optJSONArray("posts");
-
                 JSONArray posts = new JSONArray(result);
                 eventsList = new ArrayList<>();
 
                 for (int i = 0; i < posts.length(); i++) {
-                    //this method simple returns null if no value is found, so better to use this one rather than getJSONObject
                     JSONObject post = posts.optJSONObject(i);
 
-                    //this method throws JSONexceptions if value is not found
-//                JSONObject post = posts.getJSONObject(i);
                     eventItem = new EventModel();
                     eventItem.setTitle(post.optString("title"));
                     eventItem.setPoster(post.optString("poster"));

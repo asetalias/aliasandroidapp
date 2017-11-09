@@ -10,7 +10,6 @@
         android:layout_height="match_parent"
 
         android:orientation="vertical">
-        <!--android:background="@color/cardview_initial_background"-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_event"
