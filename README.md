@@ -15,5 +15,7 @@
 - Ref: `http://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository`
 - Include the screenshot of the App while submitting your PR.
 
-## Contributors 
+# Screenshots 
 
+<img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/eventFragment.png" height=408 width=200> <img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/webinarFragment.png" height=408 width=200 /> <img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/communityFragment.png" height=408 width=200 /><br/>
+&emsp;&emsp;&emsp;<b><i>events section &emsp;&emsp;&emsp;&emsp;&emsp; webinars section &emsp;&emsp;&emsp;&emsp; communities section</i></b>
