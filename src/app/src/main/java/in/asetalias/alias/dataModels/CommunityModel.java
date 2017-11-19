@@ -9,6 +9,10 @@ public class CommunityModel {
     private String title;
     private String tag;
     private String desc;
+    private String logo;
+    private String website;
+    private String meetup;
+    private String telegram;
 
     public CommunityModel() {
     }
@@ -36,11 +40,36 @@ public class CommunityModel {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getMeetup() {
+        return meetup;
+    }
+
+    public void setMeetup(String meetup) {
+        this.meetup = meetup;
+    }
+
+    public String getTelegram() {
+        return telegram;
+    }
+
+    public void setTelegram(String telegram) {
+        this.telegram = telegram;
+    }
 }
-
-
-/* {
-    "title": "PyDelhi",
-    "tag": "pydelhi",
-    "desc": "<img src=\"images/logos/pydelhi.png\" class=\"logo-med\"><br>PyDelhi is a volunteer organization, a group of technically inclined students, professionals and teachers and entrepreneurs who want to learn something new having a common primary interest in the python programming language. They Organize fortnight meetups, workshops and conference.<br><ul class=\"text-left\"><li><strong>Website: </strong><a href=\"http://pydelhi.org\">http://pydelhi.org</a></li><li><strong>Meetup Page: </strong><a href=\"https://www.meetup.com/pydelhi/\">https://www.meetup.com/pydelhi/</a>"
-  },*/

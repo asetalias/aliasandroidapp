@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/swipe_container_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
 
         <android.support.v7.widget.RecyclerView
@@ -36,7 +36,8 @@
             android:focusable="true"
             android:src="@drawable/ic_fab_plus"
             app:backgroundTint="@color/colorPrimary"
-            app:layout_anchorGravity="bottom|right|end" />
-
+            app:layout_anchorGravity="bottom|right|end"
+            app:layout_behavior="in.asetalias.alias.data.ScrollFABBehavior" />
     </RelativeLayout>
+
 </android.support.v4.widget.SwipeRefreshLayout>
