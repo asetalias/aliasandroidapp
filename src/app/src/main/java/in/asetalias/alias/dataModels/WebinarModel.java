@@ -37,10 +37,3 @@ public class WebinarModel {
         this.description = description;
     }
 }
-
-
-/*{
-    "title": "Introduction to Linux",
-    "videoId": "CTO-8BnzS_s",
-    "description": "This webinar would be about basics of Linux and its terminologies. We'll be covering basics of command lines/principles/every 'Must Know' things about Linux.<br/><strong>Speakers:</strong> <br/><strong>Anuvrat Parashar:</strong> <a href = \"http://anuvrat.in/\">http://anuvrat.in/</a>"
-  },*/

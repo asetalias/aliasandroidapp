@@ -145,6 +145,7 @@ public class WebinarFragment extends Fragment {
                     webinarItem = new WebinarModel();
                     webinarItem.setTitle(post.optString("title"));
                     webinarItem.setDescription(post.optString("description"));
+                    webinarItem.setVideoId(post.optString("videoId"));
 
                     webinarList.add(webinarItem);
                 }

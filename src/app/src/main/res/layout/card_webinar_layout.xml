@@ -30,12 +30,20 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/img_webinar"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/txt_title_webinar" />
+
             <TextView
                 android:id="@+id/txt_description_webinar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txt_title_webinar"
-                android:layout_centerHorizontal="true" />
+                android:layout_below="@id/img_webinar"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="4" />
 
         </RelativeLayout>
 
