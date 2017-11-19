@@ -2,7 +2,7 @@
 - The following repo contains the source code for the official Android App of Amity Linux Assistance Sapience.
 
 ## Contribute 
-- Feel free to open an issue or recommend any changes which you want to see in the website. 
+- Feel free to open an issue or recommend any changes which you want to see in the application. 
 - Adhere to the guidelines mentioned below if you want to contribute. 
 
 ## Guidelines 
@@ -17,5 +17,5 @@
 
 # Screenshots 
 
-<img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/eventFragment.png" height=408 width=200> <img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/webinarFragment.png" height=408 width=200 /> <img src="https://github.com/jayantb95/aliasandroidapp/blob/master/src/screenshots/communityFragment.png" height=408 width=200 /><br/>
+<img src="https://raw.githubusercontent.com/jayantb95/aliasandroidapp/master/screenshots/eventFragment.png" height=408 width=200> <img src="https://raw.githubusercontent.com/jayantb95/aliasandroidapp/master/screenshots/webinarFragment.png" height=408 width=200 /> <img src="https://raw.githubusercontent.com/jayantb95/aliasandroidapp/master/screenshots/communityFragment.png" height=408 width=200 /><br/>
 &emsp;&emsp;&emsp;<b><i>events section &emsp;&emsp;&emsp;&emsp;&emsp; webinars section &emsp;&emsp;&emsp;&emsp; communities section</i></b>
