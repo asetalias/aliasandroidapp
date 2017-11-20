@@ -59,16 +59,12 @@ public class CommunityFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_community, container, false);
 
+
         recyclerViewCommunity = (RecyclerView) rootView.findViewById(R.id.recycler_view_community);
         progressBarCommunity = (ProgressBar) rootView.findViewById(R.id.progress_bar_community);
         swipeRefreshLayoutCommunity = (SwipeRefreshLayout) rootView.findViewById(R.id.swipe_container_community);
 
-        swipeRefreshLayoutCommunity.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                new DownloadTask().execute(urlCommunity);
-            }
-        });
+        listeners();
 
 
         recyclerViewCommunity.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -82,6 +78,15 @@ public class CommunityFragment extends Fragment {
         return rootView;
     }
 
+
+    private void listeners() {
+        swipeRefreshLayoutCommunity.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new DownloadTask().execute(urlCommunity);
+            }
+        });
+    }
 
     private class DownloadTask extends AsyncTask<String, Void, Integer> {
 
@@ -148,8 +153,14 @@ public class CommunityFragment extends Fragment {
                     communityItem = new CommunityModel();
                     communityItem.setTitle(post.optString("title"));
                     communityItem.setDesc(post.optString("desc"));
+                    communityItem.setLogo(post.optString("logo"));
+                    communityItem.setWebsite(post.optString("website"));
+                    communityItem.setTelegram(post.optString("telegram"));
+                    communityItem.setMeetup(post.optString("meetup"));
 
                     communityList.add(communityItem);
+
+
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

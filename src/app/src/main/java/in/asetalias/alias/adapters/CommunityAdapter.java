@@ -1,17 +1,28 @@
 package in.asetalias.alias.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import in.asetalias.alias.R;
 import in.asetalias.alias.dataModels.CommunityModel;
+
+import static in.asetalias.alias.data.LoadJson.urlLogo;
 
 /**
  * Created by Jayant on 2017-11-05.
@@ -37,11 +48,59 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
     @Override
     public void onBindViewHolder(CommunityAdapter.CommunityViewHolder communityViewHolder, int i) {
-        CommunityModel communityItem = communityItemsList.get(i);
+        final CommunityModel communityItem = communityItemsList.get(i);
+        String logo = urlLogo + communityItem.getLogo();
+        //Render image using Picasso library
+        if (!TextUtils.isEmpty(communityItem.getLogo())) {
+            Picasso.with(mContext).load(logo)
+                    .error(R.drawable.placeholder)
+                    .placeholder(R.drawable.placeholder)
+                    .into(communityViewHolder.imgCommunity);
+        }
 
         //Setting text view texts from the model class
         communityViewHolder.txtTitleEvent.setText(Html.fromHtml(communityItem.getTitle()));
-        communityViewHolder.txtDescriptionEvent.setText(Html.fromHtml(communityItem.getDesc()));
+        communityViewHolder.txtDescriptionCommunity.setText(Html.fromHtml(communityItem.getDesc()));
+
+
+        if (!communityItem.getWebsite().isEmpty()) {
+            communityViewHolder.btnWebsite.setVisibility(View.VISIBLE);
+        }
+        if (!communityItem.getMeetup().isEmpty()) {
+            communityViewHolder.btnMeetup.setVisibility(View.VISIBLE);
+        }
+        if (!communityItem.getTelegram().isEmpty()) {
+            communityViewHolder.btnTelegram.setVisibility(View.VISIBLE);
+        }
+
+        communityViewHolder.btnWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*DevNote:
+                 * when referring button click events of some fragment from recyclerview adapter, we do it like this:
+                 * view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(communityItem.getWebsite())));
+                */
+                view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(communityItem.getWebsite())));
+                Log.d(TAG, communityItem.getWebsite());
+            }
+        });
+
+        communityViewHolder.btnMeetup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(communityItem.getMeetup())));
+                Log.d(TAG, communityItem.getMeetup());
+            }
+        });
+
+        communityViewHolder.btnTelegram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(communityItem.getTelegram())));
+                Log.d(TAG, communityItem.getTelegram());
+            }
+        });
+
     }
 
     @Override
@@ -50,13 +109,25 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
     }
 
     class CommunityViewHolder extends RecyclerView.ViewHolder {
+        ImageView imgCommunity;
+        CardView cardViewCommunity;
         TextView txtTitleEvent;
-        TextView txtDescriptionEvent;
+        TextView txtDescriptionCommunity;
+
+        Button btnWebsite;
+        Button btnMeetup;
+        Button btnTelegram;
 
         CommunityViewHolder(View view) {
             super(view);
+            this.cardViewCommunity = (CardView) view.findViewById(R.id.cardview_community);
+            this.imgCommunity = (ImageView) view.findViewById(R.id.img_community);
             this.txtTitleEvent = (TextView) view.findViewById(R.id.txt_title_community);
-            this.txtDescriptionEvent = (TextView) view.findViewById(R.id.txt_description_community);
+            this.txtDescriptionCommunity = (TextView) view.findViewById(R.id.txt_description_community);
+
+            this.btnWebsite = (Button) view.findViewById(R.id.btn_website_community);
+            this.btnMeetup = (Button) view.findViewById(R.id.btn_meetup_community);
+            this.btnTelegram = (Button) view.findViewById(R.id.btn_telegram_community);
         }
     }
 }

@@ -7,7 +7,7 @@
     android:padding="8dp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardview_event"
+        android:id="@+id/cardview_about"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
