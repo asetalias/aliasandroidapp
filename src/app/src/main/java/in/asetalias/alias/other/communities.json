@@ -1,0 +1,59 @@
+[
+  {
+    "title": "PyDelhi",
+    "tag": "pydelhi",
+    "logo": "asetalias.in/images/logos/pydelhi.png",
+    "website": "http://pydelhi.org",
+    "meetup": "https://www.meetup.com/pydelhi/",
+    "desc": "PyDelhi is a volunteer organization, a group of technically inclined students, professionals and teachers and entrepreneurs who want to learn something new having a common primary interest in the python programming language. They Organize fortnight meetups, workshops and conference."
+  },
+  {
+    "title": "Indian Linux Users Group Delhi",
+    "tag": "ilugd",
+    "logo": "asetalias.in/images/logos/ilugd.png",
+    "website": "http://ilugd.github.io",
+    "meetup": "https://www.meetup.com/pydelhi/",
+    "desc": "PyDelhi is a volunteer organization, a group of technically inclined students, professionals and teachers and entrepreneurs who want to learn something new having a common primary interest in the python programming language. They Organize fortnight meetups, workshops and conference."
+  },
+  {
+    "title": "LinuxChix India",
+    "tag": "linuxchix",
+    "logo": "asetalias.in/images/logos/linuxchix.png",
+    "telegram": "https://goo.gl/0hTwWn",
+    "website": "http://linuxchixindia.github.io",
+    "desc": "LinuxChix is a community for women who like Linux and for anyone who wants to support women in computing. We aim to promote FOSS primarily Linux and related projects among women and other minorities in tech. We are a group of enthusiastic people ranging from students to professional experts willing to teach and foster the growth of Linux.  \nLinuxChix India is a regional chapter in India of LinuxChix, a global community for women who like Linux and for anyone who wants to support women in computing. We are an international group of Free Software users and developers, founded in 1999 with the aim of supporting women in Linux. It is not only for women."
+  },
+  {
+    "title": "Mozilla Delhi",
+    "tag": "mozpacers",
+    "logo": "asetalias.in/images/logos/mozpacers.png",
+    "website": "http://ilugd.github.io",
+    "desc": "ILUG-D (Indian Linux Users Group Delhi)"
+  },
+  {
+    "title": "Open Source Community",
+    "tag": "opensource",
+    "logo": "asetalias.in/images/logos/opensource.png",
+    "googleGroup": "https://goo.gl/tmH3Mg",
+    "telegram": "https://goo.gl/rjkbmI",
+    "googleForm": "https://goo.gl/forms/teSEQh4j4697Saoz2",
+    "facebookGroup": "https://goo.gl/tMKxC8",
+    "contact": "+91-9654161510",
+    "email": "udit.gupta@owasp.org",
+    "email2": "uditwapt@gmail.com"
+  },
+  {
+    "title": "Other Dev Communities",
+    "tag": "others",
+    "logo": "",
+    "javascript": "https://goo.gl/f7sSn9",
+    "python": "https://goo.gl/Q6NE71",
+    "java": "https://goo.gl/H8XBhL",
+    "php": "https://goo.gl/Q1ipFx",
+    "c": "https://goo.gl/8nQb3w",
+    "android": "https://goo.gl/ADW5Tv",
+    "swift": "https://goo.gl/7q4X4g",
+    "webDesigning": "https://goo.gl/a6Lcy2",
+    "desc": "Join other dev groups on Telegram:"
+  }
+]

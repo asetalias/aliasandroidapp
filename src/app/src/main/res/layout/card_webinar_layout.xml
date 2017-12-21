@@ -32,9 +32,10 @@
 
             <ImageView
                 android:id="@+id/img_webinar"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_below="@id/txt_title_webinar" />
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/txt_title_webinar"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/txt_description_webinar"

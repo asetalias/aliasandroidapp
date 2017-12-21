@@ -41,8 +41,9 @@ public class WebinarAdapter extends RecyclerView.Adapter<WebinarAdapter.WebinarV
     @Override
     public WebinarAdapter.WebinarViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_webinar_layout, viewGroup, false);
-        WebinarAdapter.WebinarViewHolder viewHolder = new WebinarAdapter.WebinarViewHolder(view);
-        return viewHolder;
+//        WebinarAdapter.WebinarViewHolder webinarViewHolder = new WebinarAdapter.WebinarViewHolder(view);
+//        return webinarViewHolder;
+        return new WebinarAdapter.WebinarViewHolder(view);
     }
 
     @Override
