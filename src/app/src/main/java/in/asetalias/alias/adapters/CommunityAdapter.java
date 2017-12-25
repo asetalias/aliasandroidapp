@@ -22,7 +22,7 @@ import java.util.List;
 import in.asetalias.alias.R;
 import in.asetalias.alias.dataModels.CommunityModel;
 
-import static in.asetalias.alias.data.LoadJson.urlLogo;
+import static in.asetalias.alias.data.DataConstants.urlLogo;
 
 /**
  * Created by Jayant on 2017-11-05.

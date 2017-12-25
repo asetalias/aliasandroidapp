@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_num1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="number 1" />
+
+    <EditText
+        android:id="@+id/edt_num2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_num1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:hint="number 2" />
+
+    <EditText
+        android:id="@+id/edt_num3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_num2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:hint="number 3" />
+
+
+    <TextView
+        android:id="@+id/txt_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_num3"
+        android:text="sum"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txt_result_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_num3"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/txt_sum"
+        android:hint="sum"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txt_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_sum"
+        android:text="average"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_result_sum"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/txt_avg"
+        android:hint="average"
+        android:textSize="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_avg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Calculate/Result" />
+
+</RelativeLayout>

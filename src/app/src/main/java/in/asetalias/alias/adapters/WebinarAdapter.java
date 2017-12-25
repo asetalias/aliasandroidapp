@@ -19,9 +19,10 @@ import java.util.List;
 import in.asetalias.alias.R;
 import in.asetalias.alias.dataModels.WebinarModel;
 
-import static in.asetalias.alias.data.LoadJson.thumbHq;
-import static in.asetalias.alias.data.LoadJson.urlYoutubeApp;
-import static in.asetalias.alias.data.LoadJson.urlYoutubeThumb;
+import static in.asetalias.alias.data.DataConstants.thumbHq;
+import static in.asetalias.alias.data.DataConstants.thumbMax;
+import static in.asetalias.alias.data.DataConstants.urlYoutubeApp;
+import static in.asetalias.alias.data.DataConstants.urlYoutubeThumb;
 
 /**
  * Created by Jayant on 2017-11-05.
@@ -50,7 +51,7 @@ public class WebinarAdapter extends RecyclerView.Adapter<WebinarAdapter.WebinarV
     public void onBindViewHolder(final WebinarAdapter.WebinarViewHolder webinarViewHolder, int i) {
         WebinarModel webinarItem = webinarItemsList.get(i);
 
-        String thumbUrl = urlYoutubeThumb + webinarItem.getVideoId() + thumbHq;
+        String thumbUrl = urlYoutubeThumb + webinarItem.getVideoId() + thumbMax;
 
         //Render image using Picasso library
         if (!TextUtils.isEmpty(webinarItem.getVideoId())) {
