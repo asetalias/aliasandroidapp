@@ -53,8 +53,8 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
         //Render image using Picasso library
         if (!TextUtils.isEmpty(communityItem.getLogo())) {
             Picasso.with(mContext).load(logo)
-                    .error(R.drawable.placeholder)
-                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.vc_broken_image_placeholder)
+                    .placeholder(R.drawable.vc_image_placeholder)
                     .into(communityViewHolder.imgCommunity);
         }
 

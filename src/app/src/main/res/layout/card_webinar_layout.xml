@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    app:ignore="NamespaceTypo">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardview_webinar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
@@ -23,13 +25,23 @@
             android:layout_height="wrap_content">
 
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/img_webinar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:src="@android:drawable/ic_menu_camera" />
+                android:src="@android:drawable/ic_menu_camera" />-->
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_webinar"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius_bottom_left="0dp"
+                app:riv_corner_radius_bottom_right="0dp"
+                app:riv_corner_radius_top_left="2dp"
+                app:riv_corner_radius_top_right="2dp" />
+
 
             <TextView
                 android:id="@+id/txt_title_webinar"
@@ -37,6 +49,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/img_webinar"
                 android:layout_centerHorizontal="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
