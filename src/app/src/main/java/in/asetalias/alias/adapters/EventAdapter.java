@@ -47,8 +47,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         //Render image using Picasso library
         if (!TextUtils.isEmpty(eventItem.getPoster())) {
             Picasso.with(mContext).load(eventItem.getPoster())
-                    .error(R.drawable.placeholder)
-                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.vc_broken_image_placeholder)
+                    .placeholder(R.drawable.vc_image_placeholder)
                     .into(eventViewHolder.imgPosterEvent);
         }
 

@@ -30,7 +30,7 @@ import in.asetalias.alias.R;
 import in.asetalias.alias.adapters.WebinarAdapter;
 import in.asetalias.alias.dataModels.WebinarModel;
 
-import static in.asetalias.alias.data.LoadJson.urlWebinar;
+import static in.asetalias.alias.data.DataConstants.urlWebinar;
 
 
 /**

@@ -33,7 +33,7 @@ import in.asetalias.alias.R;
 import in.asetalias.alias.adapters.EventAdapter;
 import in.asetalias.alias.dataModels.EventModel;
 
-import static in.asetalias.alias.data.LoadJson.urlEvent;
+import static in.asetalias.alias.data.DataConstants.urlEvent;
 
 /**
  * A simple {@link Fragment} subclass.

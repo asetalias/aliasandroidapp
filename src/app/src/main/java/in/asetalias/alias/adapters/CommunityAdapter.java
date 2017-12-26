@@ -22,7 +22,7 @@ import java.util.List;
 import in.asetalias.alias.R;
 import in.asetalias.alias.dataModels.CommunityModel;
 
-import static in.asetalias.alias.data.LoadJson.urlLogo;
+import static in.asetalias.alias.data.DataConstants.urlLogo;
 
 /**
  * Created by Jayant on 2017-11-05.
@@ -53,8 +53,8 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
         //Render image using Picasso library
         if (!TextUtils.isEmpty(communityItem.getLogo())) {
             Picasso.with(mContext).load(logo)
-                    .error(R.drawable.placeholder)
-                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.vc_broken_image_placeholder)
+                    .placeholder(R.drawable.vc_image_placeholder)
                     .into(communityViewHolder.imgCommunity);
         }
 
