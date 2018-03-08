@@ -60,8 +60,8 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
         //Setting text view texts from the model class
         communityViewHolder.txtTitleEvent.setText(Html.fromHtml(communityItem.getTitle()));
-        communityViewHolder.txtDescriptionCommunity.setText(Html.fromHtml(communityItem.getDesc()));
-
+        Markwon.setMarkdown(communityViewHolder.txtDescriptionCommunity, String.valueOf(Html.fromHtml(communityItem.getDesc())));
+        
 
         if (!communityItem.getWebsite().isEmpty()) {
             communityViewHolder.btnWebsite.setVisibility(View.VISIBLE);
