@@ -61,6 +61,15 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
         //Setting text view texts from the model class
         communityViewHolder.txtTitleEvent.setText(Html.fromHtml(communityItem.getTitle()));
         communityViewHolder.txtDescriptionCommunity.setText(Html.fromHtml(communityItem.getDesc()));
+        communityViewHolder.txtDescriptionCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(communityViewHolder.txtDescriptionCommunity.getMaxLines() != Integer.MAX_VALUE)
+                    communityViewHolder.txtDescriptionCommunity.setMaxLines(Integer.MAX_VALUE);
+                else
+                    communityViewHolder.txtDescriptionCommunity.setMaxLines(4);
+            }
+        });
 
 
         if (!communityItem.getWebsite().isEmpty()) {
