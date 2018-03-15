@@ -60,7 +60,7 @@ public class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.Comm
 
         //Setting text view texts from the model class
         communityViewHolder.txtTitleEvent.setText(Html.fromHtml(communityItem.getTitle()));
-        communityViewHolder.txtDescriptionCommunity.setText(Html.fromHtml(communityItem.getDesc()));
+        Markwon.setMarkdown(communityViewHolder.txtDescriptionCommunity, String.valueOf(Html.fromHtml(communityItem.getDesc())));
         communityViewHolder.txtDescriptionCommunity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
