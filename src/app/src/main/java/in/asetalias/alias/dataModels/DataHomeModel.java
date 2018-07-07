@@ -5,42 +5,19 @@ package in.asetalias.alias.dataModels;
  */
 
 public class DataHomeModel {
-
-    private String url;
-    private String logo;
-    private String title;
+    private String site_history;
 
     public DataHomeModel() {
     }
 
-    public String getUrl() {
-        return url;
+
+
+    public String getSite_history() {
+        return site_history;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setSite_history(String site_history) {
+        this.site_history = site_history;
     }
 }
 
-
-/*{
-        "url": "communities.html#pydelhi",
-        "logo": "images/logos/pydelhi.png",
-        "title": "PyDelhi"
-      },*/
